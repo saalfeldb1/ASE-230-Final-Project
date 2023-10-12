@@ -132,41 +132,6 @@
             "price": 94,
             "picture": "product19.jpg",
             "description": "Random description for Product 19"
-        },
-        {
-            "id": "56f797f5fbaf",
-            "name": "Product 20",
-            "price": 35,
-            "picture": "product20.jpg",
-            "description": "Random description for Product 20"
-        },
-        {
-            "id": "6526f52e34dd3",
-            "name": "Practice Item",
-            "price": "44.99",
-            "picture": "product5.jpg",
-            "description": "urtiutiuityuity"
-        },
-        {
-            "id": "6526f589e621d",
-            "name": "r43r4r",
-            "price": "44.33",
-            "picture": "img1.jpg",
-            "description": "]p[]p"
-        },
-        {
-            "id": "6526f71f16bae",
-            "name": "y65y56",
-            "price": "33",
-            "picture": "uploads\/img1.jpg",
-            "description": "423453245"
-        },
-        {
-            "id": "6526f95c46cf0",
-            "name": "Brad Saalfeld",
-            "price": "50.50",
-            "picture": "img1.jpg",
-            "description": "hnnggfn"
         }
     ]
 }

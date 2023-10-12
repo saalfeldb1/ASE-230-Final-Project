@@ -1,7 +1,6 @@
 <?php 
 $title='Homepage';
 require_once 'header.php';
-print_r($_SESSION);
 $firstname='';
 
 

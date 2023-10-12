@@ -25,10 +25,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Sign Up</title>
+    <title>Sign In</title>
     <link href="custom.css" rel="stylesheet" />
 </head>
-<h1>Sign Up</h1>
+<h1>Sign In</h1>
 <form action="signin.php" method="post">
     <label for="signin_username">Username:</label>
     <input type="text" id="signin_username" name="username" required><br>

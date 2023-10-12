@@ -1,6 +1,4 @@
-<?php
-session_start();
-?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -43,6 +41,7 @@ session_start();
                             </ul>
                         </li>
                         <li class="nav-item"><a class="nav-link" href="addproduct.php">Add Product</a></li>
+                        <li class="nav-item"><a class="nav-link" href="admin.php">Admin Page</a></li>
                     </ul>
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
                     <li class="nav-item"><a class="nav-link active" aria-current="page" href="signin.php">Sign In</a></li>

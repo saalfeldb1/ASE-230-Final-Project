@@ -36,6 +36,7 @@ require_once 'header.php';
     } else {
         echo 'Product ID is missing in the URL.';
     }
+
     ?>
 </body>
 </html>
