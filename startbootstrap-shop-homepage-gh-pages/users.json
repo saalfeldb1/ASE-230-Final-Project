@@ -33,5 +33,12 @@
         "username": "saalfeld121",
         "firstname": "Brayden Andrew",
         "lastname": "Saalfeld"
+    },
+    {
+        "email": "saalfeld121@outlook.com",
+        "password": "$2y$10$dZgWDJrm64T8x7WUivlavOXP0r5pZypj1qYI0N14b3AxhQZvgnESS",
+        "username": "saa",
+        "firstname": "Brayden Andrew",
+        "lastname": "Saalfeld"
     }
 ]

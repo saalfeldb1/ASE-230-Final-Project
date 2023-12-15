@@ -1,27 +1,62 @@
 <?php
+
+$host = 'localhost';
+$dbname = 'final_project';
+$user = 'root';
+$password = '';
+
 session_start();
 
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $username = $_POST["username"];
-    $password = $_POST["password"];
+try {
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname", $user, $password);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    $users = [];
-    if (file_exists("users.json")) {
-        $users = json_decode(file_get_contents("users.json"), true);
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $username = $_POST["username"];
+        $enteredPassword = $_POST["password"];
+
+        $sql = "SELECT * FROM users WHERE username = :username";
+        $stmt = $pdo->prepare($sql);
+        $stmt->bindParam(':username', $username);
+        $stmt->execute();
+
+        $row = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        if (!$row || empty($row["usertype"])) {
+            ?>
+            <script>
+                alert("Credentials are incorrect. Please try again");
+                window.location.href = "signin.php";
+            </script>
+            <?php
+        }
+
+        $storedPassword = $row["password"];
+
+        if (password_verify($enteredPassword, $storedPassword)) {
+            // Passwords match
+            $_SESSION["username"] = $username;
+            $_SESSION["firstname"] = $row["firstname"];
+            $_SESSION["userID"] = $row["ID"];
+            
+
+            if ($row["usertype"] == "user") {
+                header("location:index.php");
+            } elseif ($row["usertype"] == "admin") {
+                $_SESSION['usertype'] = $row['usertype'];
+                header("location:admin.php");
+            }
+        } else {
+            echo "Username or password incorrect";
+        }
     }
-
-    if (isset($users[$username]) && password_verify($password, $users[$username])) {
-        echo "Sign In successful!";
-        header("Location: index.php");
-
-    } else {
-        echo "Invalid username or password.";
-        header("Location: signin.php");
-    }
-
-    exit; // Make sure to exit to prevent further script execution
+} catch (PDOException $e) {
+    echo "Error: " . $e->getMessage();
 }
+
 ?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -29,7 +64,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <link href="custom.css" rel="stylesheet" />
 </head>
 <h1>Sign In</h1>
-<form action="signin.php" method="post">
+<form action="#" method="POST">
     <label for="signin_username">Username:</label>
     <input type="text" id="signin_username" name="username" required><br>
     

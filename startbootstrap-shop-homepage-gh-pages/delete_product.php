@@ -1,34 +1,37 @@
 <?php
-if (isset($_POST['id'])) {
-    $productId = $_POST['id'];
+if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['id'])) {
+    try {
+        // Create a PDO connection
+        $host = 'localhost';
+        $dbname = 'final_project';
+        $user = 'root';
+        $password = '';
 
-    // Load the products from the JSON file
-    $products = json_decode(file_get_contents('Products.json'), true);
+        $pdo = new PDO("mysql:host=$host;dbname=$dbname", $user, $password);
+        // Set the PDO error mode to exception
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    // Find the product with the matching ID
-    $productIndex = null;
-    foreach ($products['products'] as $key => $product) {
-        if ($product['id'] === $productId) {
-            $productIndex = $key;
-            break;
+        // Prepare and execute the DELETE query
+        $stmt = $pdo->prepare("DELETE FROM products WHERE productID = :id");
+        $stmt->bindParam(':id', $_POST['id']);
+        $stmt->execute();
+
+        echo 'Product deleted successfully.';
+
+        header('location:userproducts.php');
+        if ($_SESSION['usertype']='admin'){
+            header('location:admin.php');
         }
-    }
-
-    if ($productIndex !== null) {
-        // Remove the product from the array
-        unset($products['products'][$productIndex]);
-
-        // Encode the modified array back to JSON
-        $newProductsJson = json_encode($products, JSON_PRETTY_PRINT);
-
-        // Save the updated data back to the JSON file
-        file_put_contents('Products.json', $newProductsJson);
-
-        echo 'success';
-    } else {
-        echo 'Product not found.';
+       
+    } catch (PDOException $e) {
+        echo 'Error: ' . $e->getMessage();
     }
 } else {
-    echo 'Product ID is missing in the request.';
+    echo 'Are you sure you want to delete your product?';
 }
 ?>
+<!-- Replace your existing form with this -->
+<form method="POST" action="delete_product.php">
+    <input type="hidden" name="id" value="<?php echo $_GET['id']; ?>">
+    <button type="submit">Delete Product</button>
+</form>

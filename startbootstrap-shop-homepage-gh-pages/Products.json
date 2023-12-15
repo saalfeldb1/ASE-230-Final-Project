@@ -1,137 +1,186 @@
 {
-    "products": [
-        {
-            "id": "0b50adf020a8",
-            "name": "Product 1",
-            "price": 51,
-            "picture": "product1.jpg",
-            "description": "Random description for Product 1"
-        },
-        {
+    "products": {
+        "1": {
             "id": "b97cd5529f92",
             "name": "Product 2",
             "price": 51,
             "picture": "product2.jpg",
             "description": "Random description for Product 2"
         },
-        {
+        "2": {
             "id": "8793ca3b3cc7",
             "name": "Product 3",
             "price": 92,
             "picture": "uploads\/img1.jpg",
             "description": "Random description for Product 3"
         },
-        {
+        "3": {
             "id": "ac0706820460",
             "name": "Product 4",
             "price": 40,
             "picture": "product4.jpg",
             "description": "Random description for Product 4"
         },
-        {
+        "4": {
             "id": "ffea30702c33",
             "name": "Product 5",
             "price": 28,
             "picture": "product5.jpg",
             "description": "Random description for Product 5"
         },
-        {
+        "5": {
             "id": "1c8f4c3b0bc2",
             "name": "Product 6",
             "price": 64,
             "picture": "product6.jpg",
             "description": "Random description for Product 6"
         },
-        {
+        "6": {
             "id": "16cc4c9c753c",
             "name": "Product 7",
             "price": 62,
             "picture": "product7.jpg",
             "description": "Random description for Product 7"
         },
-        {
+        "7": {
             "id": "82c92c2d6aba",
             "name": "Product 8",
             "price": 41,
             "picture": "product8.jpg",
             "description": "Random description for Product 8"
         },
-        {
+        "8": {
             "id": "cda86fb1153c",
             "name": "Product 9",
             "price": 21,
             "picture": "product9.jpg",
             "description": "Random description for Product 9"
         },
-        {
+        "9": {
             "id": "4025857f0be5",
             "name": "Product 10",
             "price": 53,
             "picture": "product10.jpg",
             "description": "Random description for Product 10"
         },
-        {
+        "10": {
             "id": "31c82c7d0daf",
             "name": "Product 11",
             "price": 38,
             "picture": "product11.jpg",
             "description": "Random description for Product 11"
         },
-        {
+        "11": {
             "id": "47251e7079e4",
             "name": "Product 12",
             "price": 57,
             "picture": "product12.jpg",
             "description": "Random description for Product 12"
         },
-        {
+        "12": {
             "id": "9ba0b7222a15",
             "name": "Product 13",
             "price": 54,
             "picture": "product13.jpg",
             "description": "Random description for Product 13"
         },
-        {
+        "13": {
             "id": "e0cd2cf7259d",
             "name": "Product 14",
             "price": 47,
             "picture": "product14.jpg",
             "description": "Random description for Product 14"
         },
-        {
+        "14": {
             "id": "9b53e9a812b3",
             "name": "Product 15",
             "price": 51,
             "picture": "product15.jpg",
             "description": "Random description for Product 15"
         },
-        {
+        "15": {
             "id": "7f82f924d30c",
             "name": "Product 16",
             "price": 90,
             "picture": "product16.jpg",
             "description": "Random description for Product 16"
         },
-        {
+        "16": {
             "id": "5c4bde30fc1c",
             "name": "Product 17",
             "price": 10,
             "picture": "product17.jpg",
             "description": "Random description for Product 17"
         },
-        {
+        "17": {
             "id": "697b02c4d827",
             "name": "Product 18",
             "price": 80,
             "picture": "product18.jpg",
             "description": "Random description for Product 18"
         },
-        {
-            "id": "8f888c636c49",
-            "name": "Product 19",
-            "price": 94,
-            "picture": "product19.jpg",
-            "description": "Random description for Product 19"
+        "18": {
+            "id": "6579da17e522b",
+            "name": "Hello",
+            "price": "22",
+            "picture": "uploads\/Lab 4 df -T.PNG",
+            "description": "This is my test product"
+        },
+        "19": {
+            "id": "6579da85c01fa",
+            "name": "Hello",
+            "price": "22",
+            "picture": "uploads\/Lab 4 df -T.PNG",
+            "description": "This is my test product"
+        },
+        "20": {
+            "id": "6579dadb1edd8",
+            "name": "Hello",
+            "price": "22",
+            "picture": "uploads\/Lab 4 df -T.PNG",
+            "description": "This is my test product"
+        },
+        "21": {
+            "id": "6579dba1ad241",
+            "name": "Hello",
+            "price": "22",
+            "picture": "uploads\/Lab 4 df -T.PNG",
+            "description": "This is my test product"
+        },
+        "22": {
+            "id": "6579dbbf64684",
+            "name": "1231242142134",
+            "price": "43241",
+            "picture": "uploads\/img1.jpg",
+            "description": "5435254325"
+        },
+        "23": {
+            "id": "6579dc4bada91",
+            "name": "55555",
+            "price": "4444",
+            "picture": "uploads\/product5.jpg",
+            "description": "55555435234"
+        },
+        "24": {
+            "id": "6579dccb29fe9",
+            "name": "4324",
+            "price": "333",
+            "picture": "uploads\/Lab 4 df -T.PNG",
+            "description": "1234432"
+        },
+        "25": {
+            "id": "6579dd4e239aa",
+            "name": "this is annoying",
+            "price": "11",
+            "picture": "uploads\/product5.jpg",
+            "description": "Please wrok"
+        },
+        "26": {
+            "id": "6579dd75ecaad",
+            "name": "er32r",
+            "price": "34242",
+            "picture": "uploads\/img1.jpg",
+            "description": "43224"
         }
-    ]
+    }
 }
